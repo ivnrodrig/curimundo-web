@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0b1026">
+  <title>Sellar autorización — CURI MUNDO</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="./"><img class="brand-mark" src="assets/logo.svg" alt="" width="30" height="30">CURI MUNDO</a>
+    </div>
+  </header>
+  <main id="main" class="container seal">
+    <h1>Autorización de YouTube</h1>
+    <p class="muted">Herramienta interna del propietario del canal. Esta página no envía nada a ningún servidor: la
+      dirección que pegues se cifra en tu navegador y solo el sistema del canal puede abrirla.</p>
+
+    <p id="bad" class="alert" hidden>Enlace incompleto o de otra versión. Ábrelo de nuevo desde la incidencia de GitHub.</p>
+    <p id="nocrypto" class="alert" hidden>Este navegador no permite cifrar. Usa una versión reciente de Chrome, Edge, Firefox o Safari.</p>
+
+    <ol id="steps" class="steps" hidden>
+      <li>
+        <h2>Autoriza en Google</h2>
+        <p>Entra con la cuenta del canal CURI MUNDO, elige el canal y acepta <strong>todos</strong> los permisos.</p>
+        <a id="go" class="btn" href="#" target="_blank" rel="noopener noreferrer">Abrir Google</a>
+      </li>
+      <li>
+        <h2>Pega la dirección final</h2>
+        <p>Google te llevará a una página de <code>127.0.0.1</code> que no carga: es lo esperado. Copia la dirección
+          completa de la barra del navegador y pégala aquí.</p>
+        <label for="url" class="sr">Dirección final</label>
+        <textarea id="url" rows="3" spellcheck="false" autocomplete="off" placeholder="http://127.0.0.1:8765/?state=…&amp;code=…"></textarea>
+        <button id="seal" class="btn" type="button">Sellar</button>
+        <p id="err" class="alert" hidden></p>
+      </li>
+      <li>
+        <h2>Pega el sello en la incidencia</h2>
+        <p>Copia este texto y pégalo como comentario en la incidencia de GitHub. Solo sirve para este enlace.</p>
+        <textarea id="out" rows="4" readonly spellcheck="false"></textarea>
+        <button id="copy" class="btn-secondary" type="button" disabled>Copiar sello</button>
+        <span id="copied" class="muted" hidden>Copiado.</span>
+      </li>
+    </ol>
+  </main>
+  <script src="assets/sellar.js"></script>
+</body>
+</html>
