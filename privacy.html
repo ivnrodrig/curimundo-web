@@ -92,8 +92,7 @@
           <tbody>
             <tr><td><code>youtube.readonly</code></td><td>Leer la información y la lista de vídeos del canal.</td></tr>
             <tr><td><code>yt-analytics.readonly</code></td><td>Leer las estadísticas agregadas del canal en YouTube Analytics.</td></tr>
-            <tr><td><code>youtube.upload</code></td><td>Subir los vídeos producidos por CURI MUNDO.</td></tr>
-            <tr><td><code>youtube.force-ssl</code></td><td>Editar título, descripción, etiquetas y miniatura de los vídeos propios, y programar su publicación.</td></tr>
+            <tr><td><code>youtube.upload</code></td><td>Subir los vídeos producidos por CURI MUNDO (con su fecha de publicación programada) y poner la miniatura al vídeo recién subido.</td></tr>
           </tbody>
         </table>
       </div>
@@ -103,8 +102,10 @@
           número de suscriptores, visualizaciones y vídeos, lista de subidas y estado del canal.</li>
         <li><strong>Datos de los vídeos propios:</strong> identificador, título, descripción, etiquetas, duración, fecha de
           publicación, estado de privacidad y estadísticas públicas (visualizaciones, «me gusta», número de comentarios).</li>
-        <li><strong>Acciones de escritura sobre el canal propio:</strong> subir vídeos (como privados y programados),
-          actualizar sus metadatos, establecer miniaturas y comprobar que la publicación quedó como se esperaba.</li>
+        <li><strong>Acciones de escritura sobre el canal propio:</strong> subir vídeos nuevos (como privados y programados),
+          establecer la miniatura del vídeo recién subido y comprobar que la publicación quedó como se esperaba. La
+          herramienta <strong>no modifica ni elimina</strong> vídeos ya subidos: no solicita los permisos que lo
+          permitirían y, además, lo bloquea en su propio código.</li>
       </ul>
       <h3>YouTube Analytics API</h3>
       <ul>
@@ -120,7 +121,6 @@
       <ul>
         <li>Generar informes periódicos de rendimiento del canal para tomar decisiones creativas y de calendario.</li>
         <li>Subir, programar y verificar la publicación de los vídeos del canal en sus horarios.</li>
-        <li>Mantener los metadatos y miniaturas de los vídeos propios.</li>
       </ul>
       <p>Los datos no se usan para publicidad, para crear perfiles de personas ni para entrenar modelos de inteligencia
         artificial, y no se venden.</p>
@@ -248,8 +248,7 @@
           <tbody>
             <tr><td><code>youtube.readonly</code></td><td>Read the channel's information and video list.</td></tr>
             <tr><td><code>yt-analytics.readonly</code></td><td>Read the channel's aggregated YouTube Analytics statistics.</td></tr>
-            <tr><td><code>youtube.upload</code></td><td>Upload videos produced by CURI MUNDO.</td></tr>
-            <tr><td><code>youtube.force-ssl</code></td><td>Edit the title, description, tags and thumbnail of the channel's own videos, and schedule their publication.</td></tr>
+            <tr><td><code>youtube.upload</code></td><td>Upload videos produced by CURI MUNDO (with their scheduled publication time) and set the thumbnail of the newly uploaded video.</td></tr>
           </tbody>
         </table>
       </div>
@@ -259,8 +258,10 @@
           counts, uploads playlist and channel status.</li>
         <li><strong>Own video data:</strong> ID, title, description, tags, duration, publication date, privacy status and
           public statistics (views, likes, comment count).</li>
-        <li><strong>Write actions on the own channel:</strong> uploading videos (as private and scheduled), updating their
-          metadata, setting thumbnails and checking that the publication went as expected.</li>
+        <li><strong>Write actions on the own channel:</strong> uploading new videos (as private and scheduled), setting
+          the thumbnail of the newly uploaded video and checking that the publication went as expected. The tool
+          <strong>does not modify or delete</strong> videos already uploaded: it does not request the permissions that
+          would allow it and also blocks it in its own code.</li>
       </ul>
       <h3>YouTube Analytics API</h3>
       <ul>
@@ -276,7 +277,6 @@
       <ul>
         <li>To produce periodic channel performance reports used for creative and scheduling decisions.</li>
         <li>To upload, schedule and verify the publication of the channel's videos at their set times.</li>
-        <li>To maintain the metadata and thumbnails of the channel's own videos.</li>
       </ul>
       <p>The data is not used for advertising, for profiling people or for training artificial-intelligence models, and
         it is not sold.</p>
